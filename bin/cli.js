@@ -134,7 +134,7 @@ commander
 commander
   .command('service <action>')
   .description('- perform action (start|stop|restart) on splunk services')
-  .option('-s, --service <name>', 'service name (splunkd|splunkweb|*) [*]', '*')
+  .option('-n, --name <name>', 'service name (splunkd|splunkweb|*) [*]', '*')
   .action(function(action, cmd) {
     checkSplunkHome();
     // Verify action
@@ -143,11 +143,11 @@ commander
       process.exit(4);
     }
     // Verify service
-    if (['splunkd', 'splunkweb', '*'].indexOf(cmd.service) < 0) {
-      console.error('Unknown service: ' + cmd.service);
+    if (['splunkd', 'splunkweb', '*'].indexOf(cmd.name) < 0) {
+      console.error('Unknown service: ' + cmd.name);
       process.exit(4);
     }
-    grunt('splunk-services:' + cmd.service + ':' + action, commander.verbose);
+    grunt('splunk-services:' + cmd.name + ':' + action, commander.verbose);
   });
 
 commander
