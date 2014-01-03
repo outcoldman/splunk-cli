@@ -9,7 +9,8 @@ var _ = require('underscore'),
     environment = require('grunt-splunk/lib/environment'),
     grunt = require('./../lib/grunt'),
     yo = require('./../lib/yo'),
-    splunkApps = require('grunt-splunk/lib/apps');
+    splunkApps = require('grunt-splunk/lib/apps'),
+    inquirer = require('inquirer');
 
 var checkSplunkHome = function() {
   if (commander.splunkHome) {
@@ -116,7 +117,18 @@ commander
   .description('- create new application')
   .action(function(appname) {
     checkSplunkHome();
-    yo(splunkApps.create(appname), commander.verbose);
+    yo(splunkApps.create(appname), commander.verbose, function() {
+      inquirer.prompt({
+        type: 'confirm',
+        name: 'restart',
+        message: 'Do you want to restart Splunk?',
+        default: true
+      }, function(answers) {
+        if (answers.restart) {
+          grunt('splunk-services:*:restart', commander.verbose);
+        }
+      });
+    });
   });
 
 commander
