@@ -168,7 +168,7 @@ commander
     checkSplunkHome();
     configuration.executeUnderConfiguration(
       function(done) {
-        grunt('splunk-services::reload-apps', commander.verbose, done);
+        grunt('splunk-services:reload-apps', commander.verbose, done);
       });
   });
 
