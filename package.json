@@ -29,14 +29,14 @@
     "ini": "~1.1.0",
     "remove": "~0.1.5",
     "commander": "~2.1.0",
-    "minimatch": "~0.2.14"
+    "minimatch": "~0.2.14",
+    "generator-splunkapp": "git+ssh://git@github.com:splunk/generator-splunkapp.git",
+    "grunt-splunk": "git+ssh://git@github.com:splunk/grunt-splunk.git"
   },
   "peerDependencies": {
     "yo": ">=1.0.0",
     "grunt-cli": ">=0.1.11",
-    "bower": ">=1.2.8",
-    "generator-splunkapp": "git+ssh://git@github.com:splunk/generator-splunkapp.git",
-    "grunt-splunk": "git+ssh://git@github.com:splunk/grunt-splunk.git"
+    "bower": ">=1.2.8"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
