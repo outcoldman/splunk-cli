@@ -5,18 +5,18 @@
 Install this globally and you'll have access to the grunt command anywhere on your system.
 
 ```
-npm install -g splunk-cli
+npm install -g splunkdev
 ```
 
 ## Usage
 
 To get started 
 
-### splunk-cli --help
+### splunkdev --help
 
 ```
 
-  Usage: splunk-cli [options] [command]
+  Usage: splunkdev [options] [command]
 
   Commands:
 
@@ -37,7 +37,7 @@ To get started
 
 ```
 
-### splunk-cli apps --help
+### splunkdev apps --help
 
 > show / maintain applications
 
@@ -61,46 +61,46 @@ To get started
 Show installed applications:
 
 ```
-splunk-cli apps
+splunkdev apps
 ```
 
 Show all installed applications (included disabled and system applications):
 
 ```
-splunk-cli apps --disabled --system
+splunkdev apps --disabled --system
 ```
 
 Show applications with name which starts with "test"
 
 ```
-splunk-cli apps "test*"
+splunkdev apps "test*"
 ```
 
 Remove application "my_application"
 
 ```
-splunk-cli apps my_application --remove
+splunkdev apps my_application --remove
 ```
 
 Remove applications with name which starts with "test"
 
 ```
-splunk-cli apps "test*" --remove
+splunkdev apps "test*" --remove
 ```
 
 Change state for application "my_application" to disabled
 
 ```
-splunk-cli apps my_application --state disabled
+splunkdev apps my_application --state disabled
 ```
 
 Change state for application "my_application" to enabled
 
 ```
-splunk-cli apps my_application --state enabled
+splunkdev apps my_application --state enabled
 ```
 
-### splunk-cli create --help
+### splunkdev create --help
 
 > create new application
 
@@ -115,7 +115,7 @@ splunk-cli apps my_application --state enabled
 
 ```
 
-### splunk-cli service --help
+### splunkdev service --help
 
 > perform action (start|stop|restart) on splunk services
 
@@ -136,34 +136,34 @@ splunk-cli apps my_application --state enabled
 Start all Splunk services
 
 ```
-splunk-cli service start
+splunkdev service start
 ```
 
 Restart all Splunk services
 
 ```
-splunk-cli service restart
+splunkdev service restart
 ```
 
 Stop all Splunk services
 
 ```
-splunk-cli service stop
+splunkdev service stop
 ```
 
 Start splunkd service
 
 ```
-splunk-cli service stop --service splunkd
+splunkdev service stop --service splunkd
 ```
 
 Restart splunkweb service
 
 ```
-splunk-cli service restart --service splunkweb
+splunkdev service restart --service splunkweb
 ```
 
-### splunk-cli watch --help
+### splunkdev watch --help
 
 > watch for changes
 
@@ -185,11 +185,11 @@ splunk-cli service restart --service splunkweb
 Watch for changes in application "my_application". If something will be changed and this will require to restart/reload any of the services/configurations in Splunk - this will happened automatically.
 
 ```
-splunk-cli watch --app my_application
+splunkdev watch --app my_application
 ```
 
 
-### splunk-cli reload --help
+### splunkdev reload --help
 
 > reload application configurations
 
@@ -204,7 +204,7 @@ splunk-cli watch --app my_application
 
 ```
 
-### splunk-cli config --help
+### splunkdev config --help
 
 > configure cli for current splunk instance
 

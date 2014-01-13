@@ -193,11 +193,11 @@ commander
     checkSplunkHome();
     if (cmd.remove) {
       // Remove configuration
-      // splunk-cli config -R
+      // splunkdev config -R
       configuration.remove();
     } else {
       // Configure current instance
-      // splunk-cli config
+      // splunkdev config
       configuration.configure();
     }
   });

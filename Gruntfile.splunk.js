@@ -1,6 +1,6 @@
 /*jshint globalstrict: true*/ 'use strict';
 
-// This is grunt file which is used to launch grunt tasks from splunk-cli
+// This is grunt file which is used to launch grunt tasks from splunkdev
 
 var configuration = require('grunt-splunk/lib/configuration');
 

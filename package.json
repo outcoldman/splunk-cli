@@ -1,5 +1,5 @@
 {
-  "name": "splunk-cli",
+  "name": "splunkdev",
   "description": "Splunk development command line interface.",
   "version": "0.1.0",
   "homepage": "https://github.com/splunk/splunk-cli",
@@ -45,6 +45,6 @@
   },
   "keywords": [
     "splunk",
-    "splunk-cli"
+    "splunkdev"
   ]
 }
