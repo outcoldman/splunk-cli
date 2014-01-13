@@ -30,8 +30,8 @@
     "remove": "~0.1.5",
     "commander": "~2.1.0",
     "minimatch": "~0.2.14",
-    "generator-splunkapp": "git+ssh://git@github.com:splunk/generator-splunkapp.git",
-    "grunt-splunk": "git+ssh://git@github.com:splunk/grunt-splunk.git"
+    "generator-splunkapp": "https://github.com/outcoldman/generator-splunkapp/archive/public-dependencies.tar.gz",
+    "grunt-splunk": "https://github.com/outcoldman/grunt-splunk/archive/public-dependencies.tar.gz"
   },
   "peerDependencies": {
     "yo": ">=1.0.0",
